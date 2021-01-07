@@ -20,11 +20,11 @@ int main(int argc, char** argv) {
                return 0; 
        }
  srand((unsigned int)time(NULL));
-int ras = rand()%(*(&a1s + 1) - a1s);
-int rbs = rand()%(*(&b1s + 1) - b1s);
-int rls = rand()%(*(&e1s + 1) - e1s);
-int rcs = rand()%(*(&c1s + 1) - c1s);
-int rns = rand()%(*(&n1s + 1) - n1s);
+int ras = rand_r()%(*(&a1s + 1) - a1s);
+int rbs = rand_r()%(*(&b1s + 1) - b1s);
+int rls = rand_r()%(*(&e1s + 1) - e1s);
+int rcs = rand_r()%(*(&c1s + 1) - c1s);
+int rns = rand_r()%(*(&n1s + 1) - n1s);
    if (std::string (argv[1]) == "--symmetric") {
             std::cout << a1s[ras] << b1s[rbs] << c1s[rcs] << e1s[rls] << n1s[rns] << e2s[rls] << c2s[rcs] << b2s[rbs] << a2s[ras] << '\n';
                return 0; 
