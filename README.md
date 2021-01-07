@@ -1,5 +1,5 @@
 # kaomoji_generator
-<br />
+<br>
 [![CodeFactor](https://www.codefactor.io/repository/github/redacted82/kaomoji_generator/badge/main)](https://www.codefactor.io/repository/github/redacted82/kaomoji_generator/overview/main)
 <br />
 A program to genorate Kaomojis.
