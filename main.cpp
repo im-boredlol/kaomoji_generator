@@ -20,12 +20,12 @@ int main(int argc, char** argv) {
                return 0; 
        }
 thread_local unsigned int seed = time(NULL);
-int ras = rand_r(&seed)%(*(&a1s + 1) - a1s);
-int rbs = rand_r(&seed)%(*(&b1s + 1) - b1s);
-int rls = rand_r(&seed)%(*(&e1s + 1) - e1s);
-int rcs = rand_r(&seed)%(*(&c1s + 1) - c1s);
-int rns = rand_r(&seed)%(*(&n1s + 1) - n1s);
    if (std::string (argv[1]) == "--symmetric") {
+           int ras = rand_r(&seed)%(*(&a1s + 1) - a1s);
+           int rbs = rand_r(&seed)%(*(&b1s + 1) - b1s);
+            int rls = rand_r(&seed)%(*(&e1s + 1) - e1s);
+            int rcs = rand_r(&seed)%(*(&c1s + 1) - c1s);
+            int rns = rand_r(&seed)%(*(&n1s + 1) - n1s);
             std::cout << a1s[ras] << b1s[rbs] << c1s[rcs] << e1s[rls] << n1s[rns] << e2s[rls] << c2s[rcs] << b2s[rbs] << a2s[ras] << '\n';
                return 0; 
        }
@@ -35,7 +35,7 @@ int rns = rand_r(&seed)%(*(&n1s + 1) - n1s);
                return 0; 
        }
  if (std::string (argv[1]) == "--nonsymmetric") {
-            std::cout << a1s[rand()%(*(&a1s + 1) - a1s)] << b1s[rand()%(*(&b1s + 1) - b1s)] << c1s[rand()%(*(&c1s + 1) - c1s)] << e1s[rand()%(*(&e1s + 1) - e1s)] << n1s[rand()%(*(&n1s + 1) - n1s)] << e2s[rand()%(*(&e2s + 1) - e2s)] << c2s[rand()%(*(&c2s + 1) - c2s)] << b2s[rand()%(*(&b2s + 1) - b2s)] << a2s[rand()%(*(&a2s + 1) - a2s)] << '\n';
+            std::cout << a1s[rand_r(&seed)%(*(&a1s + 1) - a1s)] << b1s[rand_r(&seed)%(*(&b1s + 1) - b1s)] << c1s[rand_r(&seed)%(*(&c1s + 1) - c1s)] << e1s[rand_r(&seed)%(*(&e1s + 1) - e1s)] << n1s[rand_r(&seed)%(*(&n1s + 1) - n1s)] << e2s[rand_r(&seed)%(*(&e2s + 1) - e2s)] << c2s[rand_r(&seed)%(*(&c2s + 1) - c2s)] << b2s[rand_r(&seed)%(*(&b2s + 1) - b2s)] << a2s[rand_r(&seed)%(*(&a2s + 1) - a2s)] << '\n';
                return 0; 
        }
         if (std::string (argv[1]) == "--nonsymmetric_length") {
